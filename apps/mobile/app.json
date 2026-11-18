@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "星笺",
+    "slug": "stellar-notes",
+    "scheme": "stellarnotes",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#120D20",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.gaojinghua.stellarnotes",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDevelopmentRegion": "zh-Hans",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "android": {
+      "package": "com.gaojinghua.stellarnotes",
+      "adaptiveIcon": {
+        "backgroundColor": "#120D20",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#120D20"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "选一张今天的照片，结合命盘做今日解读。只在你确认后才发送。",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      "expo-image",
+      "@react-native-community/datetimepicker",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "eas": {
+        "projectId": "db27106c-0dae-49e5-a20b-1d504ed3d15b"
+      }
+    },
+    "owner": "coco_eat_meat",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/db27106c-0dae-49e5-a20b-1d504ed3d15b"
+    }
+  }
+}
